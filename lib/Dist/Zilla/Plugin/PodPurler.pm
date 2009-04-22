@@ -1,5 +1,5 @@
 package Dist::Zilla::Plugin::PodPurler;
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 # ABSTRACT: like PodWeaver, but more erratic and amateurish
 use Moose;
@@ -66,14 +66,6 @@ sub munge_pod {
   my $doc = PPI::Document->new(\$content);
   my @pod_tokens = map {"$_"} @{ $doc->find('PPI::Token::Pod') || [] };
   $doc->prune('PPI::Token::Pod');
-
-  if (@{ $doc->find('PPI::Token::HereDoc') || [] }) {
-    $self->log(
-      sprintf "can't invoke %s on %s: PPI can't munge code with here-docs",
-        $self->plugin_name, $file->name
-    );
-    return;
-  }
 
   my $pe = 'Dist::Zilla::Plugin::PodPurler::Eventual';
 
@@ -151,7 +143,11 @@ sub munge_pod {
   $doc->prune('PPI::Statement::End');
   $doc->prune('PPI::Statement::Data');
 
-  $content = $end ? "$doc\n\n$newpod\n\n$end" : "$doc\n__END__\n$newpod\n";
+  my $docstr = $doc->serialize;
+
+  $content = $end
+           ? "$docstr\n\n$newpod\n\n$end"
+           : "$docstr\n__END__\n$newpod\n";
 
   $file->content($content);
 }
@@ -212,7 +208,7 @@ Dist::Zilla::Plugin::PodPurler - like PodWeaver, but more erratic and amateurish
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 WARNING
 
