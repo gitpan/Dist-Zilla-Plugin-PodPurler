@@ -1,5 +1,5 @@
 package Dist::Zilla::Plugin::PodPurler;
-our $VERSION = '0.002';
+our $VERSION = '0.091411';
 
 # ABSTRACT: like PodWeaver, but more erratic and amateurish
 use Moose;
@@ -55,7 +55,7 @@ sub munge_file {
 
 sub _h1 {
   my $name = shift;
-  any { $_->{type} eq 'command' and $_->{content} =~ /^\Q$name$/m } @_;
+  any { $_->{type} eq 'command' and $_->{content} =~ /^\Q$name\E$/m } @_;
 }
 
 sub munge_pod {
@@ -208,7 +208,7 @@ Dist::Zilla::Plugin::PodPurler - like PodWeaver, but more erratic and amateurish
 
 =head1 VERSION
 
-version 0.002
+version 0.091411
 
 =head1 WARNING
 
