@@ -3,7 +3,7 @@
       "repository" : "http://github.com/rjbs/dist-zilla-plugin-podpurler/tree"
    },
    "generated_by" : "Dist::Zilla::Plugin::MetaJSON version 1.091370",
-   "version" : "0.091411",
+   "version" : "0.091440",
    "name" : "Dist-Zilla-Plugin-PodPurler",
    "requires" : {
       "PPI" : "0",

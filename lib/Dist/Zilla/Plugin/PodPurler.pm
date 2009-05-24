@@ -1,5 +1,5 @@
 package Dist::Zilla::Plugin::PodPurler;
-our $VERSION = '0.091411';
+our $VERSION = '0.091440';
 
 # ABSTRACT: like PodWeaver, but more erratic and amateurish
 use Moose;
@@ -41,7 +41,7 @@ sub munge_file {
         $event->{type} = 'text';
       }
 
-      if ($event->{type} eq 'text') {
+      if ($event->{type} eq 'text' or $event->{type} eq 'blank') {
         $str .= "$event->{content}\n";
         next EVENT;
       }
@@ -208,7 +208,7 @@ Dist::Zilla::Plugin::PodPurler - like PodWeaver, but more erratic and amateurish
 
 =head1 VERSION
 
-version 0.091411
+version 0.091440
 
 =head1 WARNING
 
@@ -224,6 +224,8 @@ things.
 
 PodPurler ress, which rips apart your kinda-POD and reconstructs it as boring
 old real POD.
+
+
 
 =head1 AUTHOR
 

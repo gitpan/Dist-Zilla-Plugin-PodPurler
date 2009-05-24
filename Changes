@@ -1,6 +1,9 @@
 Revision history for Dist-Zilla-Plugin-PodPurler
 
-0.091411  2009-05-21 02:10:55 UTC
+0.091440  2009-05-24 16:08:45 UTC
+          cope with new Pod::Eventual "blank" events
+
+0.091411  2009-05-20
           fix code to correct skip pre-existing blocks like AUTHOR
 
 0.002     2009-04-21
