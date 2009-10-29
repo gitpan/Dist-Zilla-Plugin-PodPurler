@@ -1,13 +1,13 @@
 {
    "resources" : {
-      "repository" : "http://github.com/rjbs/dist-zilla-plugin-podpurler/tree"
+      "repository" : "http://github.com/rjbs/dist-zilla-plugin-podpurler"
    },
    "meta-spec" : {
       "version" : 1.4,
       "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
    },
-   "generated_by" : "Dist::Zilla version 1.092850",
-   "version" : "0.092930_001",
+   "generated_by" : "Dist::Zilla version 1.092990",
+   "version" : "0.093020",
    "name" : "Dist-Zilla-Plugin-PodPurler",
    "author" : [
       "Ricardo SIGNES <rjbs@cpan.org>"
@@ -20,6 +20,7 @@
       "Pod::Eventual" : "0",
       "List::MoreUtils" : "0",
       "Moose::Autobox" : "0.08",
+      "Pod::Elemental::PerlMunger" : "0",
       "Moose" : "0"
    },
    "abstract" : "like PodWeaver, but more erratic and amateurish"

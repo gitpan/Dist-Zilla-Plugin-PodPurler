@@ -9,7 +9,7 @@ WriteMakefile(
   NAME      => 'Dist::Zilla::Plugin::PodPurler',
   AUTHOR    => "Ricardo\ SIGNES\ \<rjbs\@cpan\.org\>",
   ABSTRACT  => "like\ PodWeaver\,\ but\ more\ erratic\ and\ amateurish",
-  VERSION   => '0.092930_001',
+  VERSION   => '0.093020',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {
@@ -19,6 +19,7 @@ WriteMakefile(
     "Pod::Eventual" => '0',
     "List::MoreUtils" => '0',
     "Moose::Autobox" => '0.08',
+    "Pod::Elemental::PerlMunger" => '0',
     "Moose" => '0',
   },
   test => {TESTS => 't/*.t'}
