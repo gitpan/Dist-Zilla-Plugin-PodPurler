@@ -2,6 +2,8 @@
 use strict;
 use warnings;
 
+
+
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
@@ -9,7 +11,7 @@ WriteMakefile(
   NAME      => 'Dist::Zilla::Plugin::PodPurler',
   AUTHOR    => "Ricardo\ SIGNES\ \<rjbs\@cpan\.org\>",
   ABSTRACT  => "like\ PodWeaver\,\ but\ more\ erratic\ and\ amateurish",
-  VERSION   => '0.093020',
+  VERSION   => '0.093400',
   EXE_FILES => [ qw() ],
   (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'perl') : ()),
   PREREQ_PM    => {

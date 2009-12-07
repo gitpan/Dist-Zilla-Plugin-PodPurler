@@ -1,7 +1,5 @@
 package Dist::Zilla::Plugin::PodPurler;
-our $VERSION = '0.093020';
-
-
+our $VERSION = '0.093400';
 # ABSTRACT: like PodWeaver, but more erratic and amateurish
 use Moose;
 use Moose::Autobox;
@@ -186,17 +184,13 @@ Dist::Zilla::Plugin::PodPurler - like PodWeaver, but more erratic and amateurish
 
 =head1 VERSION
 
-version 0.093020
+version 0.093400
 
 =head1 WARNING
 
-This code is really, really sketchy.  It's crude and brutal and will probably
-break whatever it is you were trying to do.
-
-Unlike L<Dist::Zilla::Plugin::PodWeaver|Dist::Zilla::Plugin::PodWeaver>, this
-code will not get awesome.  In fact, it's just the old PodWeaver code, spun out
-(no pun intended) so that RJBS can use it while he fixes PodWeaver-related
-things.
+This library has been superceded by L<Pod::Weaver> and
+L<Dist::Zilla::Plugin::PodWeaver>.  It is unlikely to be updated again unless
+there are serious security problems (!?) or someone gives me money.
 
 =head1 DESCRIPTION
 

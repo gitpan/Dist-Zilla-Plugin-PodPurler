@@ -1,5 +1,8 @@
 Revision history for Dist-Zilla-Plugin-PodPurler
 
+0.093400  2009-12-06 19:34:41 America/New_York
+          formal "it's dead, jim" notice
+
 0.093020  2009-10-29
           refactor out a lot of common code to Pod::Elemental::PerlMunger
 

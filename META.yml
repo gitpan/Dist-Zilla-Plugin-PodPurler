@@ -1,0 +1,22 @@
+---
+abstract: 'like PodWeaver, but more erratic and amateurish'
+author:
+  - 'Ricardo SIGNES <rjbs@cpan.org>'
+generated_by: 'Dist::Zilla version 1.093400'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Dist-Zilla-Plugin-PodPurler
+requires:
+  Dist::Zilla: 0
+  List::MoreUtils: 0
+  Moose: 0
+  Moose::Autobox: 0.08
+  PPI: 0
+  Pod::Elemental: 0.092930
+  Pod::Elemental::PerlMunger: 0
+  Pod::Eventual: 0
+resources:
+  repository: http://github.com/rjbs/dist-zilla-plugin-podpurler
+version: 0.093400
