@@ -1,8 +1,10 @@
 package Dist::Zilla::Plugin::PodPurler;
-our $VERSION = '0.093400';
+{
+  $Dist::Zilla::Plugin::PodPurler::VERSION = '0.093401';
+}
 # ABSTRACT: like PodWeaver, but more erratic and amateurish
 use Moose;
-use Moose::Autobox;
+use Moose::Autobox 0.08;
 use List::MoreUtils qw(any);
 with 'Dist::Zilla::Role::FileMunger';
 
@@ -176,6 +178,7 @@ no Moose;
 1;
 
 __END__
+
 =pod
 
 =head1 NAME
@@ -184,18 +187,18 @@ Dist::Zilla::Plugin::PodPurler - like PodWeaver, but more erratic and amateurish
 
 =head1 VERSION
 
-version 0.093400
-
-=head1 WARNING
-
-This library has been superceded by L<Pod::Weaver> and
-L<Dist::Zilla::Plugin::PodWeaver>.  It is unlikely to be updated again unless
-there are serious security problems (!?) or someone gives me money.
+version 0.093401
 
 =head1 DESCRIPTION
 
 PodPurler ress, which rips apart your kinda-POD and reconstructs it as boring
 old real POD.
+
+=head1 WARNING
+
+This library has been superceded by L<Pod::Weaver> and
+L<Dist::Zilla::Plugin::PodWeaver>.  It is unlikely to be updated again unless
+there are serious security problems (!?) or someone gives me some money.
 
 =head1 AUTHOR
 
@@ -203,10 +206,9 @@ Ricardo SIGNES <rjbs@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Ricardo SIGNES.
+This software is copyright (c) 2013 by Ricardo SIGNES.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
